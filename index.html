@@ -1,12 +1,495 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World Example</title>
-  </head>
-  <body>
-    <b>Hello World</b>
-    <p>Hello World</p>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>LOGen: Toward Lidar Object Generation by Point Diffusion</title>
+  
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LOGen: Toward Lidar Object Generation by Point Diffusion</h1>
+            <!-- <p>&nbsp;</p> -->
+            <em><h1 style="font-size: 28px;">A step toward augmenting lidar point clouds with object diversity</h1></em>
+            <p>&nbsp;</p>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://ellingtonkirby.github.io/" target="_blank">Ellington Kirby</a>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.fr/citations?hl=fr&user=QnRpMJAAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Mickael Chen</a>,</span>
+                  <span class="author-block">
+                    <a href="https://imagine.enpc.fr/~marletr/" target="_blank">Renaud Marlet</a>,</span>
+                    <span class="author-block">
+                      <a href="https://nerminsamet.github.io/" target="_blank">Nermin Samet</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <!-- <span class="author-block">Institution Name<br>Conferance name and year</span> -->
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                
+                
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span> -->
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero">
+
+    <div class="container">
+        <div class="video" autoplay controls muted loop height="1200%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/barrier_merge.mp4"
+            type="video/mp4">
+          </video>        
+          <h2 class="subtitle has-text-centered">
+            <small>barrier</small>
+          </h2>  
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/bike_merge.mp4"
+            type="video/mp4">
+          </video>
+          <h2 class="subtitle has-text-centered">
+            <small>bike</small>
+          </h2>          
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/bus_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>bus</small>
+          </h2>        
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/car_merge.mp4"
+            type="video/mp4">
+          </video>     
+          <h2 class="subtitle has-text-centered">
+            <small>car</small>
+          </h2>     
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/cv_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>construction vehicle</small>
+          </h2>  
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/motor_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>motorcycle</small>
+          </h2>  
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/ped_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>pedestrian</small>
+          </h2>  
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/tc_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>traffic cone</small>
+          </h2>  
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/trailer_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>trailer</small>
+          </h2>  
+        </div>
+        <div class="video" autoplay controls muted loop height="100%">
+          <video autoplay controls muted loop height="100%">
+            <!-- Your video here -->
+            <source src="static/videos/truck_merge.mp4"
+            type="video/mp4">
+          </video>  
+          <h2 class="subtitle has-text-centered">
+            <small>truck</small>
+          </h2>  
+        </div>
+        <h2 class="subtitle has-text-centered">
+          <div class="content has-text-justified">
+        Real (white) and generated (green) objects by LOGen for all ten instance classes of nuScenes. 
+        <!-- LOGen is able to capture the lidar pattern and generate objects of varying scales and shapes.  -->
+      </h2>   
+      </div>
+    </div>
+  </section>
+ 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            A common strategy to improve lidar segmentation results on rare semantic classes consists of pasting objects from one lidar scene into another. While this augments the quantity of instances seen at training time and varies their context, the instances fundamentally remain the same. In this work, we explore how to enhance instance diversity using a lidar object generator. We introduce a novel diffusion-based method to produce lidar point clouds of dataset objects, including reflectance, and with an extensive control of the generation via conditioning information. Our experiments on nuScenes show the quality of our object generations measured with new 3D metrics developed to suit lidar objects.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+ 
+
+<section class="section hero ">
+  <div class="container is-max-desktop" >
+    <div class="columns" style="justify-content: flex-start; margin-left: 0;">
+      <div class="column is-four-fifths-left" style="text-align: left;">
+        <h2 class="title is-4" style="color: black; text-align: left !important;">The objects generated by LOGen are indistinguishable from real objects in certain classes</h2>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/spvcnn.PNG" alt="MY ALT TEXT" />
+          <div class="content has-text-justified">
+          <p class="subtitle">
+            <small><small>SPVCNN is trained with 3 (left) or 4 (right) channels (coordinates + intensity) on nuScenes (train set) with real objects. It is tested on nuScenes (val set) where each object is replaced with a generated object of the same class,
+            box size and sensor viewing angle, and with the same number of points. </small></small>
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- model -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths-left">
+        <h2 class="title is-4" align="center" style="color: black; text-align: left;">
+          LOGen can generate intensities for lidar objects
+        </h2>
+        <div class="video-container">
+          <div class="video-item"><video src="static/videos/barrier_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/bike_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/bus_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/car_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/cv_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/motor_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/ped_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/tc_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/trailer_merge_i.mp4" autoplay controls muted loop></video></div>
+          <div class="video-item"><video src="static/videos/truck_merge_i.mp4" autoplay controls muted loop></video></div>
+        </div>
+
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- model -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths-left">
+        <h2 class="title is-4" align="center" style="color: black; text-align: left;">
+          LOGen is the first diffusion method that leverages transformer architecture for point cloud generation
+        </h2>
+        <div class="item">
+          <div style="text-align: center;">
+          <!-- Your image here -->
+          <img src="static/images/logen_model.PNG" alt="MY ALT TEXT" style="width: 60%; height: auto;"/>
+        </div>
+          <div class="content has-text-justified">
+          <p class="subtitle">
+            <small><small>LOGen conditions the generation on the following box information: the box center (x, y, z), the box length, width and height (l, w, h) and  
+              ϕ the angle between the object heading ψ and the ray from the object bounding box center to the sensor.</small></small>
+          
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths-left">
+        <h2 class="title is-4" align="center" style="color: black; text-align: left;">
+          LOGen can generate new objects from novel views by interpolating the viewing angle of the condition
+        </h2>
+        <!-- <div class="item">
+          <div style="text-align: center;">
+          <img src="static/images/novel_objects.PNG" alt="MY ALT TEXT" style="width: 60%; height: auto;"/>
+        </div> -->
+        <!-- Column Headers Section -->
+        <div class="columns is-mobile is-multiline">
+          <!-- Header Row -->
+          <div class="column is-2">
+            <h4 class="has-text-centered">reference ground-truth</h4>
+          </div>
+          <div class="column is-2">
+            <h4 class="has-text-centered">recreation, rotation 0</h4>
+          </div>
+          <div class="column is-2">
+            <h4 class="has-text-centered">novel view, rotation 1/5 </h4>
+          </div>
+          <div class="column is-2">
+            <h4 class="has-text-centered">novel view, rotation 2/5</h4>
+          </div>
+          <div class="column is-2">
+            <h4 class="has-text-centered">novel view, rotation 3/5</h4>
+          </div>
+          <div class="column is-2">
+            <h4 class="has-text-centered">novel view, rotation 4/5</h4>
+          </div>
+        </div>
+
+        <div class="image-grid">
+          <div class="image-item"><img src="static/images/barrier_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/barrier_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/barrier_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/barrier_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/barrier_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/barrier_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/bike_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/bike_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/bike_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/bike_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/bike_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/bike_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/bus_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/bus_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/bus_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/bus_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/bus_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/bus_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/car_aug2_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/car_aug2_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/car_aug2_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/car_aug2_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/car_aug2_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/car_aug2_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/cw_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/cw_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/cw_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/cw_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/cw_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/cw_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/motor_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/motor_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/motor_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/motor_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/motor_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/motor_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/ped_aug_org.png" alt="Image 1" width="500" height="300"></div>
+          <div class="image-item"><img src="static/images/ped_aug_l0.png" alt="Image 2" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/ped_aug_l1.png" alt="Image 3" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/ped_aug_l2.png" alt="Image 4" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/ped_aug_l3.png" alt="Image 4" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/ped_aug_l4.png" alt="Image 4" style="height: 70%; "></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/tc_aug_org.png" alt="Image 1" style="height: 70%;"></div>
+          <div class="image-item"><img src="static/images/tc_aug_l0.png" alt="Image 2" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/tc_aug_l1.png" alt="Image 3" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/tc_aug_l2.png" alt="Image 4" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/tc_aug_l3.png" alt="Image 4" style="height: 70%; "></div>
+          <div class="image-item"><img src="static/images/tc_aug_l4.png" alt="Image 4" style="height: 70%; "></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/trailer_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/trailer_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/trailer_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/trailer_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/trailer_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/trailer_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+          <div class="image-item"><img src="static/images/truck_aug_org.png" alt="Image 1"></div>
+          <div class="image-item"><img src="static/images/truck_aug_l0.png" alt="Image 2"></div>
+          <div class="image-item"><img src="static/images/truck_aug_l1.png" alt="Image 3"></div>
+          <div class="image-item"><img src="static/images/truck_aug_l2.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/truck_aug_l3.png" alt="Image 4"></div>
+          <div class="image-item"><img src="static/images/truck_aug_l4.png" alt="Image 4"></div>
+          <!-- ... Repeat until you have 50 images (10 x 5 grid) -->
+        </div>
+          <div class="content has-text-justified">
+          <p class="subtitle">
+            <small><small>Novel objects produced by LOGen. Recreations are generated using the conditioning information of a real object, the
+              rest of the objects are created from novel views by interpolating the viewing angle ϕ of the condition.</small></small>
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="image-section">
+  
+</section>
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-wrapper">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{logen,
+        author = {Ellington Kirby and Mickael Chen and Renaud Marlet and Nermin Samet},
+        title = {LOGen: Toward Lidar Object Generation by Point Diffusion},
+        booktitle = {arXiv},
+        year = {2024},
+      }</code></pre>
+    </div>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            <small><small>This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.</small></small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
   </body>
-</html>
+  </html>
